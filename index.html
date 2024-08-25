@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>JS Calculator</title>
+    </head>
+    <body class="bg-gray-200">
+        <div class="md:container text-center mt-9 mx-auto">
+            <div class="bg-gray-600 shadow-xl inline-block rounded-lg">
+                <input type="text" class="displayInput text-right w-[400px] focus:outline-none rounded-lg cursor-pointer text-4xl h-[90px]" readonly>
+                <div class="grid font-bold text-[20px] py-4 px-3 grid-cols-4 gap-2">
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="clearDisplay()">AC</button>
+                    <button class="bg-gray-300 p-4 rounded flex justify-center focus:outline-none hover:bg-gray-400" onclick="clearLastValue()"><img src="https://i.ibb.co/P9JHw05/icons8-clear-24.png" alt=""></button>
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('%')">%</button>
+                    <button class="bg-orange-400 p-4 rounded focus:outline-none hover:bg-orange-500" onclick="addValue('÷')">&divide;</button>
+
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('7')">7</button>
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('8')">8</button>
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('9')">9</button>
+                    <button class="bg-orange-400 p-4 rounded focus:outline-none hover:bg-orange-500" onclick="addValue('×')">&times;</button>
+        
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('4')">4</button>
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('5')">5</button>
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('6')">6</button>
+                    <button class="bg-orange-400 p-4 rounded focus:outline-none hover:bg-orange-500" onclick="addValue('-')">-</button>
+        
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('1')">1</button>
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('2')">2</button>
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('3')">3</button>
+                    <button class="bg-orange-400 p-4 rounded focus:outline-none hover:bg-orange-500" onclick="addValue('+')">+</button>
+        
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400 col-span-2" onclick="addValue('0')">0</button>
+                    <button class="bg-gray-300 p-4 rounded focus:outline-none hover:bg-gray-400" onclick="addValue('.')">.</button>
+                    <button class="bg-orange-400 p-4 rounded focus:outline-none hover:bg-orange-500" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
